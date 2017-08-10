@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router'
 
 class BatchItem extends PureComponent {
   static PropTypes = {
@@ -7,11 +8,12 @@ class BatchItem extends PureComponent {
     students: PropTypes.string.isRequired,
   }
   render() {
-    const { title, students, start, end} = this.props
+    const { _id, title, students, start, end} = this.props
 
     return(
       <article className="batch">
-      <h1>{ title }</h1>
+      <Link to="/batches{_id}">{ title }</Link>
+
       <div>
         <h4>{ students }</h4>
         <h4>{ start }</h4>
@@ -23,3 +25,4 @@ class BatchItem extends PureComponent {
 }
 
 export default BatchItem
+// <h1>{ title }</h1>
