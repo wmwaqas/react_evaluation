@@ -2,19 +2,53 @@ import React, { Component } from 'react';
 import './App.css';
 // import Title from './components/Title'
 import BatchesContainer from './batches/BatchesContainer'
+import PropTypes from 'prop-types'
 
-const batches = [
+
+
+
+const students = [
   {
-    title: 'Batch # 1',
-    students: 'No of Students ' + 6,
+    name: 'John',
+    photo: 'No of Students',
+    red: false,
+    yellow: false,
+    green: false,
   },
   {
-    title: 'Batch # 2',
-    students: 'No of Students ' + 6,
+    name: 'Tom',
+    photo: 'No of Students',
+    red: false,
+    yellow: false,
+    green: false,
   },
   {
-    title: 'Batch # 3',
-    students: 'No of Students ' + 6,
+    name: 'Micheal',
+    photo: 'No of Students',
+    red: false,
+    yellow: false,
+    green: false,
+  },
+  {
+    name: 'Tim',
+    photo: 'No of Students',
+    red: false,
+    yellow: false,
+    green: false,
+  },
+  {
+    name: 'Bob',
+    photo: 'No of Students',
+    red: false,
+    yellow: false,
+    green: false,
+  },
+  {
+    name: 'Harry',
+    photo: 'No of Students',
+    red: false,
+    yellow: false,
+    green: false,
   },
 ]
 
@@ -24,7 +58,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <BatchesContainer batches={ batches } />
+      <BatchesContainer/>
+      { this.props.children }
       </div>
     );
   }
